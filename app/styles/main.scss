@@ -1,0 +1,63 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
+// Custom Styles
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.hero-unit {
+  //margin: 20px auto 0 auto;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 40px;
+  background-color: RGBA(227, 213, 204, 1);
+  border-radius: 6px;
+  padding: 60px;
+
+    .welcome {
+      text-align: center;
+      font-family: 'Pirata One', cursive;
+    }
+    .fight {
+      display: none;
+      text-align: center;
+      font-family: 'Pirata One', cursive;
+    }
+  }
+.ggHealth, .bgHealth {
+  color: blue;
+  padding-left: 15px;
+}
+.navigation {
+  width: 1300px;
+  height: 300px;
+  background-color: RGBA(128, 84, 45, 1);
+  border-radius: 2px;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+padding-top: 20px;
+}
+button {
+  background: RGBA(227, 213, 204, 1);
+}
+.sidebar {
+  float: left;
+  text-align: center;
+  width: 200px;
+  //margin-right: 500px;
+
+    a {
+      float: left;
+    }
+    .instructions {
+      float: left;
+      font-size: 1.5em;
+
+    }
+}

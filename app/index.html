@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>game12</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Pirata+One' rel='stylesheet' type='text/css'>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <div class="hero-unit">
+      <div class="welcome">
+        <div class="sidebar">
+        <a><img src="http://www.seatcoverconnection.net/images/prod/seat_covers_11224_be.jpg" alt="Crossbones"></a>
+        <p class="instructions">Ahoy Matey! Welcome to the Fighting Pirates, choose yer pirate and be prepared to battle for the island of Tortuga!</p>
+      </div>
+        <img class="ocean" src="http://www.wall321.com/thumbnails/detail/20120318/ocean%20beach%20sea%20tropical%20skyscapes%201680x1050%20wallpaper_www.wallpaperto.com_28.jpg" />
+        <div class="navigation">
+
+        <h1>Ahoy Matey! Choose Yer Fighting Pirate</h1>
+          <button name="1">Ruth "Both Barrels" Prisk</button>
+          <button name="2">Wade "Commodore Chops" Yelland</button>
+          <button name="3">Miranda "Bonny Baby" Keel</button>
+      </div> <!-- end of navigation -->
+      </div>
+      <div class="fight"><!-- Beginning of Fight -->
+        <p id="player" class="ggName"> <span class="ggHealth"></span></p>
+        <p>Vs</p>
+        <p id="monster" class="bgName"> <span class="bgHealth"></span></p>
+        <button id="fight">Attack <span class="bgName"></span></button>
+      </div><!-- end of fight -->
+    </div>
+
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
