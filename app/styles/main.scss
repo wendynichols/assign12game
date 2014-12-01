@@ -2,11 +2,14 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+$font: 'Pirata One', cursive;
+
 // Custom Styles
 body {
   background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Pirata One', cursive, sans-serif;
   color: #333;
+  max-width: 1500px;
 }
 
 .hero-unit {
@@ -16,16 +19,20 @@ body {
   line-height: 40px;
   background-color: RGBA(227, 213, 204, 1);
   border-radius: 6px;
-  padding: 60px;
+  padding: 5px;
 
     .welcome {
       text-align: center;
-      font-family: 'Pirata One', cursive;
+      font-family: $font;
     }
     .fight {
       display: none;
       text-align: center;
-      font-family: 'Pirata One', cursive;
+      font-family: $font;
+    }
+    .instructions {
+      font-size: 1.6em;
+      text-align: center;
     }
   }
 .ggHealth, .bgHealth {
@@ -37,6 +44,7 @@ body {
   height: 300px;
   background-color: RGBA(128, 84, 45, 1);
   border-radius: 2px;
+  margin-left: 55px;
 }
 h1 {
 font-size: 2em;
@@ -45,19 +53,4 @@ padding-top: 20px;
 }
 button {
   background: RGBA(227, 213, 204, 1);
-}
-.sidebar {
-  float: left;
-  text-align: center;
-  width: 200px;
-  //margin-right: 500px;
-
-    a {
-      float: left;
-    }
-    .instructions {
-      float: left;
-      font-size: 1.5em;
-
-    }
 }
