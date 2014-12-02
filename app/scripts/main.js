@@ -19,15 +19,15 @@
     switch (this.type) {      //Use this switch statement for multiple 'players'
       case 1:
         attack_pt = 10;     //Make random points
-        special_pt = 20;
+        special_pt = 15;
       break;
       case 2:
-        attack_pt = 15;
-        special_pt = 25;
+        attack_pt = 7;
+        special_pt = 14;
       break;
       case 3:
         attack_pt = 5;
-        special_pt = 30;
+        special_pt = 20;
       break;
     };
     this.attack = function (attackee) {
@@ -63,10 +63,6 @@
            $('.fight').fadeIn();
         });
   });
-
-    // FIGHT SEQUENCE
-      // 1. Health drops below zero
-      // 2. winner is not random
 
 
   $('#fight').on('click', function (event) {
