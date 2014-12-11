@@ -78,84 +78,69 @@ function GameController(leftCombatants, rightCombatants) {
     var options = options || {};
     this.name = options.name;
     this.life = options.life ||'normal';
-    this.age = options.age;
-    this.color = options.color;
     this.health = options.health;
     this.attack = function(cutlassed){
-      var result = cutlassed.health -= _.random(20, 25);
+      var result = cutlassed.health -= _.random(5, 10);
       $('.health' + '.' + cutlassed.name).html(result);
       return result;
     };
     this.life = function(cutlassed) {
-      return cutlassed.health -= _.random(30, 35);
+      return cutlassed.health -= _.random(10, 15);
     };
     $('.health.' + options.name).html(options.health);
   };
 
-  var Lion = function (options){
+  var Buccaneer = function (options){
     var options = options || {};
     this.life = options.life;
     this.name = options.name;
-    this.age = options.age;
-    this.color = options.color;
     this.health = options.health;
-    this.attack = function(chomped){
-      var result = chomped.health -= _.random(20, 25);
-      $('.health' + '.' + chomped.name).html(result);
+    this.attack = function(cannoned){
+      var result = cannoned.health -= _.random(5, 10);
+      $('.health' + '.' + cannoned.name).html(result);
       return result;
     };
-    this.life = function(chomped) {
-      return chomped.health -= _.random(20,35);
+    this.life = function(cannoned) {
+      return cannoned.health -= _.random(15,20);
     };
     $('.health.' + options.name).html(options.health);
   };
 
-  var Ruth = new Pirates({
+  var Ruth = new Pirate({
     name: "Ruth",
     age: 14,
     color: "gray",
     health: 100
   });
 
-  var malenda = new Pirates({
-    name:"malenda",
-    age: 17,
-    color: "gray",
+  var Wade = new Pirate({
+    name:"Wade",
     health: 100
   });
 
-  var pinky = new Pirates({
-    name:"pinky",
-    age: 39,
-    color: "gray",
-    health: 95
+  var Miranda = new Pirate({
+    name:"Miranda",
+    health: 100
   });
 
-  var scar = new Buccaneers({
-    name: "scar",
-    age: 14,
-    color: "yellow",
-    life: 'poor',
-    health: 95
+  var James = new Buccaneer({
+    name: "James",
+    health: 100
   });
 
-  var timba = new Buccaneers({
-    name: "timba",
-    age: 24,
-    color: "brown",
-    health: 90
+  var Henry = new Buccaneer({
+    name: "Henry",
+    health: 100
   });
 
-  var jack = new Buccaneers({
-    name: "jack",
-    age: 18,
-    color: "brown",
+  var Thomas = new Buccaneer({
+    name: "Thomas",
     health: 100
   })
 
   var controller = new GameController(
-    [solanga, malenda, pinky],
-    [scar, timba, jack]);
+    [Ruth, Wade, Miranda],
+    [James, Henry, Thomas]);
 
     var turnOnMessageNumber = function(x){
       $(".greetings > p").css("display","none");
@@ -163,17 +148,17 @@ function GameController(leftCombatants, rightCombatants) {
 
     };
 
-    $(".elephants").on("click", function() {
+    $(".Pirates").on("click", function() {
       controller.playerChoosesLeft();
       turnOnMessageNumber(3);
     });
 
-    $(".lions").on("click", function() {
+    $(".Buccaneers").on("click", function() {
       controller.playerChoosesRight();
       turnOnMessageNumber(3);
     });
 
-    $(".ellie, .lion").on("click", function(){
+    $(".pirate, .buccaneer").on("click", function(){
       // var animal name was clicked
       var animalName = $(this).text();
       var a = animalName.toLowerCase();
@@ -181,7 +166,7 @@ function GameController(leftCombatants, rightCombatants) {
       turnOnMessageNumber(4);
     });
 
-    $(".ellibut, .lionbut").on("click", function(){
+    $(".pirateButt, .buccaneerButt").on("click", function(){
       controller.attack();
       if(controller.gameIsFinished()){
         turnOnMessageNumber(5);

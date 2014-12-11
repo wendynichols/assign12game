@@ -13,9 +13,10 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <link href='http://fonts.googleapis.com/css?family=Pirata+One' rel='stylesheet' type='text/css'>
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Pirata+One' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -28,58 +29,36 @@
       <div class="welcome">
         <p class="instructions">Ahoy Matey! Welcome to the Fighting Pirates, choose yer pirate and get ready to keep the buccaneers off the island of Tortuga!</p>
         <img class="ocean" src="http://duuro.net/wp-content/uploads/2013/05/ACIVBF_Concept_Art_La_Havane_1.jpg" />
+      </div>
+      <div class="navigation">
+        <div class="greetings">
+          <h1>Choose Yer Fighting Pirate or Buccaneer</h1>
+            <p>Choose who you fight with...</p>
+            Choose to be a Pirate or Buccaneer
+            <p style="display:none;">Pick a Pirate or Buccaneer from your crew</p>
+            <p style="display:none;">Attack your enemy<br> click the button to attack</p>
+            <p style="display:none;">Play Again?</p>
+      </div>
+      <button class="pirateButt" name="button">Cutlass</button>
+      <button class="buccaneerButt" name="button">Cannon</button>
+      <div class="good"><button class="Pirates">Pirates</button>
+        <button class="pirate Ruth">Ruth "Both Barrels" Prisk</button>
+          <div class="health Ruth"></div>
+        <button class="pirate Wade">Wade "Commodore Chops" Yelland</button>
+          <div class="health Wade"></div>
+        <button class="pirate Miranda">Miranda "Bonny Baby" Keel</button>
+          <div class="health Miranda"></div>
+      </div>
+      <div class="bad"><button class="Buccaneers">Buccaneers</button>
+        <button class="buccaneer James">Captain James Blake</button>
+          <div class="health James"></div>
+        <button class="buccaneer Henry">Lieutenant Henry Carter</button>
+          <div class="health Henry"></div>
+        <button class="buccaneer Thomas">Captain Thomas Lewis</button>
+          <div class="health Thomas"></div>
+      </div>
+      </div>
 
-        <div class="navigation">
-        <h1>Choose Yer Fighting Pirate</h1>
-          <button name="1">Ruth "Both Barrels" Prisk</button>
-          <button name="2">Wade "Commodore Chops" Yelland</button>
-          <button name="3">Miranda "Bonny Baby" Keel</button>
-      </div> <!-- end of navigation -->
-
-      <div>
-        <button class="ellibut" name="button">Cutlass</button>
-        <button class="lionbut" name="button">Dagger</button>
-        <div class="good"><button class="Pirates">Pirates</button>
-          <ul>
-            <li><button class="Ruth">Ruth "Both Barrels" Prisk</button>
-              <div class="health solanga"></div></li>
-              <li><button class="ellie malenda">Wade "Commodore Chops" Yelland</button>
-                <div class="health malenda"></div></li>
-                <li><button class="ellie pinky">Miranda "Bonny Baby" Keel</button>
-                  <div class="health pinky"></div></li>
-                </ul>
-              </div>
-              <div class="bad"><button class="Buccaneers">Buccaneers</button>
-                <ul>
-                  <li><button class="lion scar">Scar</button>
-                    <div class="health scar"></div></li>
-                    <li><button class="lion timba">Timba</button>
-                      <div class="health timba"></div></li>
-                      <li><button class="lion jack">Jack</button>
-                        <div class="health jack"></div></li>
-                      </ul>
-                    </div>
-                  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    </div> <!-- end of welcome -->
-
-      <div class="fight"><!-- Beginning of Fight -->
-        <p id="player" class="ggName"> <span class="ggHealth"></span></p>
-        <p>Vs</p>
-        <p id="monster" class="bgName"> <span class="bgHealth"></span></p>
-        <button id="fight">Attack <span class="bgName"></span></button>
-      </div><!-- end of fight -->
     </div> <!-- end of hero-unit -->
 
 
