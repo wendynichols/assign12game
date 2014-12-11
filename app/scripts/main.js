@@ -1,21 +1,3 @@
-'use strict';
-/*
-step 1:
-chose your team from left or right side
-step 2
-pick your player
-step 3
-computer picks its player from opposite side
-step 4
-you attack
-step 5
-computer attacks
-step 6
-the first one to die loses
-step 7
-Game Over
-*/
-
 function GameController(leftCombatants, rightCombatants) {
   this._turn = null;
   this.leftCombatants = leftCombatants;
@@ -57,7 +39,7 @@ function GameController(leftCombatants, rightCombatants) {
       return combatantChoices;
     };
     this.attack = function(){
-      console.log(this.playerCombatant,"vs", this.computerCombatant);
+      //console.log(this.playerCombatant,"vs", this.computerCombatant);
       if(this.gameIsFinished()) {
         console.log("game is over");
         return;
@@ -108,8 +90,6 @@ function GameController(leftCombatants, rightCombatants) {
 
   var Ruth = new Pirate({
     name: "Ruth",
-    age: 14,
-    color: "gray",
     health: 100
   });
 
@@ -159,10 +139,10 @@ function GameController(leftCombatants, rightCombatants) {
     });
 
     $(".pirate, .buccaneer").on("click", function(){
-      // var animal name was clicked
-      var animalName = $(this).text();
-      var a = animalName.toLowerCase();
-      controller.playerChoosesCombatant(a);
+      // var fighter name was clicked
+      var fighterName = $(this).text();
+      var f = fighterName.toLowerCase();
+      controller.playerChoosesCombatant(f);
       turnOnMessageNumber(4);
     });
 
@@ -172,118 +152,4 @@ function GameController(leftCombatants, rightCombatants) {
         turnOnMessageNumber(5);
       };
 
-    });
-  // var BadGuy = function (name) {
-  //   this.name = name;
-  //   this.health = 100;
-  //   this.attack = function (attackee){
-  //     return attackee.health = attackee.health - _.random(2, 10); //Great place to use _.random to change up health points
-  //   };
-  //   this.special = function (attackee) {
-  //     return attackee.health = attackee.health - _.random(7, 25);
-  //   };
-  // };
-  //
-  //
-  // var GoodGuy = function (options) {
-  //   var special_pt, attack_pt;
-  //   options = options || {};
-  //   this.name = options.name;
-  //   this.type = options.type;
-  //   this.health = 100;
-  //   switch (this.type) {      //Use this switch statement for multiple 'players'
-  //     case 1:
-  //       attack_pt = 10;     //Make random points
-  //       special_pt = 15;
-  //     break;
-  //     case 2:
-  //       attack_pt = 7;
-  //       special_pt = 14;
-  //     break;
-  //     case 3:
-  //       attack_pt = 5;
-  //       special_pt = 20;
-  //     break;
-  //   };
-  //   this.attack = function (attackee) {
-  //     return attackee.health = atackee.health - attack_pt;
-  //   };
-  //   this.special = function (attackee) {
-  //     return attackee.health = atackee.health - special_pt;
-  //   };
-  // };
-  //
-  //
-  //     // STARTING THE GAME
-  //   var player, monster;
-  //
-  // $('.welcome button').on('click', function (event) {
-  //     event.preventDefault();  //always add preventDefault when you know you're going to make the button do something specific
-  //
-  //   // Create an instance of my Good Guy
-  //     var player = new GoodGuy({
-  //       name: $(this).text(),
-  //       type: parseInt($(this).attr('name'))
-  //
-  //     });
-  //
-  //       // Create an instance of my Bad Guy
-  //     var monster = new BadGuy('Johnny');
-  //
-  //     // GET READY TO FIGHT KO KO KO
-  //       $('.welcome').fadeOut(500, function () {
-  //             //Set Player/Monster Names & Health
-  //          $('.ggName').prepend(player.name).find('.ggHealth').text(player.health);
-  //          $('.bgName').prepend(monster.name).find('.bgHealth').text(monster.health);
-  //          $('.fight').fadeIn();
-  //       });
-  // });
-  //
-  //
-  // $('#fight').on('click', function (event) {
-  //   event.preventDefault();
-  //
-  // var attack_type =
-  //       // Goodguy will attack the Badguy
-  //       // Badguys health will decrease
-  //   player.attack(monster);
-  //   if (monster.health > 0) {
-  //     $('.bgHealth').text(monster.health);
-  //     if (attack_type === 1) {
-  //     monster.attack(player);
-  //   } else {
-  //     monster.special(player);
-  //   } else
-  //
-  //
-  //   });
-  //
-  //
-  //
-  //    else {
-  //
-  //     });
-  // /////////////////////////////////
-  //     $('.bgHealth').text('0');
-  //     $('#fight').fadeOut();
-  //   }
-  //
-  //
-  //
-  //   if (player.health <= 0 ) {
-  //       //player's dead
-  //     } else if (monster.health <= 0 ) {
-  //       //monster's dead
-  //     }
-  //
-  // });
-  // ///////////////////////////
-  // monster.attack(player);
-  // if (player.health > 0) {
-  //   $('.ggHealth').text(player.health);
-  //   if (attack_type === 1) {
-  //     player.attack(monster);
-  //   } else {
-  //     player.special(monster);
-  //   }
-  // });
+});
