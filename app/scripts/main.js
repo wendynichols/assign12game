@@ -10,12 +10,15 @@ function GameController(leftCombatants, rightCombatants) {
     this.player = 'right';
     this.computer = 'left';
   };
+
   this.playerChoosesCombatant = function(/*string*/name){
     var combatant = _.findWhere(
       this.getPlayerCombatants(),{"name": name});
-      this.playerCombatant = combatant;
       this._computerChoosesCombatant();
+      this.playerCombatant = combatant;
+      console.log(combatant);
     };
+
     this._computerChoosesCombatant = function(){
       var x = this.getComputerCombatants();
       this.computerCombatant = _.sample(x);
@@ -39,7 +42,7 @@ function GameController(leftCombatants, rightCombatants) {
       return combatantChoices;
     };
     this.attack = function(){
-      //console.log(this.playerCombatant,"vs", this.computerCombatant);
+      console.log(this.playerCombatant,"vs", this.computerCombatant);
       if(this.gameIsFinished()) {
         console.log("game is over");
         return;
@@ -51,6 +54,7 @@ function GameController(leftCombatants, rightCombatants) {
       this.computerCombatant.attack(this.playerCombatant);
     };
     this.gameIsFinished = function(){
+      console.log(this.playerCombatant);
       return this.playerCombatant.health <= 0 || // playerCombatant
       this.computerCombatant.health <= 0; //.computerCombatant
     };
